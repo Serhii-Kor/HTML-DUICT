@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube - Копія структури</title>
+    <style>
+        /* Загальні стилі для тіла сторінки */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        /* Контейнер для головної сторінки */
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        /* Шапка сайту */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #ff0000;
+            color: white;
+        }
+
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .header .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: 5px;
+            border-radius: 4px;
+            width: 500px;
+        }
+
+        .header .search-bar input {
+            border: none;
+            padding: 5px;
+            width: 90%;
+        }
+
+        .header .search-bar button {
+            padding: 5px;
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Бічне меню */
+        .sidebar {
+            width: 250px;
+            background-color: #f1f1f1;
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar a {
+            padding: 12px;
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            margin: 5px 0;
+            background-color: #fff;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #e1e1e1;
+        }
+
+        /* Контент (відео-картки) */
+        .main-content {
+            display: flex;
+            flex: 1;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            padding: 20px;
+        }
+
+        .video-card {
+            width: 250px;
+            margin: 10px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .video-card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+        }
+
+        .video-card .title {
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        /* Футер */
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Шапка сайту -->
+        <div class="header">
+            <div class="logo">YouTube</div>
+            <div class="search-bar">
+                <input type="text" placeholder="Пошук">
+                <button>Пошук</button>
+            </div>
+        </div>
+
+        <div style="display: flex;">
+            <!-- Бічне меню -->
+            <div class="sidebar">
+                <a href="#">Головна</a>
+                <a href="#">Тренди</a>
+                <a href="#">Підписки</a>
+                <a href="#">Бібліотека</a>
+                <a href="#">Історія</a>
+            </div>
+
+            <!-- Основний контент (відео-картки) -->
+            <div class="main-content">
+                <div class="video-card">
+                    <img src="https://via.placeholder.com/250x140" alt="Video Thumbnail">
+                    <div class="title">Назва відео 1</div>
+                </div>
+                <div class="video-card">
+                    <img src="https://via.placeholder.com/250x140" alt="Video Thumbnail">
+                    <div class="title">Назва відео 2</div>
+                </div>
+                <div class="video-card">
+                    <img src="https://via.placeholder.com/250x140" alt="Video Thumbnail">
+                    <div class="title">Назва відео 3</div>
+                </div>
+                <div class="video-card">
+                    <img src="https://via.placeholder.com/250x140" alt="Video Thumbnail">
+                    <div class="title">Назва відео 4</div>
+                </div>
+                <div class="video-card">
+                    <img src="https://via.placeholder.com/250x140" alt="Video Thumbnail">
+                    <div class="title">Назва відео 5</div>
+                </div>
+                <div class="video-card">
+                    <img src="https://via.placeholder.com/250x140" alt="Video Thumbnail">
+                    <div class="title">Назва відео 6</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Футер -->
+        <div class="footer">
+            YouTube - 2012
+        </div>
+    </div>
+
+</body>
+</html>
+

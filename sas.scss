@@ -1,0 +1,120 @@
+// Змінні для основних кольорів та шрифтів
+$primary-color: #3498db;
+$secondary-color: #e74c3c;
+$background-color: #ecf0f1;
+$text-color: #2c3e50;
+$white-color: #fff;
+$font-family: 'Poppins', sans-serif;
+$cta-color: #16a085;
+$hover-color: darken($cta-color, 10%);
+
+// Міксини для часто використовуваних стилів
+@mixin button-styles($bg-color, $text-color) {
+    padding: 15px 30px;
+    font-weight: bold;
+    border-radius: 50px;
+    text-decoration: none;
+    color: $text-color;
+    background-color: $bg-color;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+        background-color: darken($bg-color, 10%);
+        transform: scale(1.05);
+    }
+}
+
+// Загальні стилі для body
+body {
+    font-family: $font-family;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: $background-color;
+    text-align: center;
+}
+
+// Стилі для header
+.header {
+    background-color: $primary-color;
+    color: white;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
+
+    &__content {
+        max-width: 800px;
+    }
+
+    &__title {
+        font-size: 4rem;
+        margin: 0;
+    }
+
+    &__subtitle {
+        font-size: 1.5rem;
+        margin-top: 10px;
+    }
+}
+
+// Стилі для intro
+.intro {
+    background-color: $white-color;
+    padding: 60px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+    &__content {
+        max-width: 800px;
+    }
+
+    &__title {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: $text-color;
+    }
+
+    &__description {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        color: $text-color;
+    }
+}
+
+// Стилізація кнопок
+.button {
+    display: inline-block;
+    font-size: 1.1rem;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 15px 30px;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &--primary {
+        @include button-styles($cta-color, $white-color);
+    }
+
+    &--secondary {
+        @include button-styles($secondary-color, $white-color);
+    }
+}

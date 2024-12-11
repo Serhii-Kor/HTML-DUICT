@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анімація</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-color: #98FB98; /* Змінили фон на світло-зелений */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background-image: url('https://www.transparenttextures.com/patterns/cubes.png'); /* Фон із текстурою */
+            animation: backgroundAnimation 10s infinite linear; /* Анімація фону */
+        }
+
+        /* Анімація для фону */
+        @keyframes backgroundAnimation {
+            0% { background-position: 0 0; }
+            100% { background-position: 300px 300px; }
+        }
+
+        /* Контейнер для анімації покемона */
+        .pokemon-container {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            animation: movePokemon 5s infinite linear; /* Анімація покемона */
+        }
+
+        /* Покемон */
+        .pokemon {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png'); /* Заміни на потрібного покемона */
+            background-size: cover;
+            animation: spriteAnimation 1s steps(10) infinite; /* Анімація спрайта */
+        }
+
+        /* Анімація переміщення покемона */
+        @keyframes movePokemon {
+            0% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(150px, 0);
+            }
+            50% {
+                transform: translate(150px, 150px);
+            }
+            75% {
+                transform: translate(0, 150px);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        /* Анімація для спрайта покемона */
+        @keyframes spriteAnimation {
+            0% { background-position: 0 0; }
+            100% { background-position: -1500px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Контейнер для покемона -->
+    <div class="pokemon-container">
+        <div class="pokemon"></div>
+    </div>
+
+</body>
+</html>

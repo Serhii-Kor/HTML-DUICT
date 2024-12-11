@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Planner</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .sidebar {
+            display: grid;
+            grid-template-rows: repeat(3, auto) 1fr;
+            gap: 10px;
+        }
+
+        .main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .section {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+
+        h2 {
+            font-size: 18px;
+            margin: 0 0 10px;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .checkbox-label input {
+            margin-right: 10px;
+        }
+
+        .editable {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background: white;
+            resize: none;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .main {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(7, auto);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="section">
+                <h2>Top 3 Goals</h2>
+                <div class="checkbox-label"><input type="checkbox"> <input type="text" class="editable" placeholder="Goal 1"></div>
+                <div class="checkbox-label"><input type="checkbox"> <input type="text" class="editable" placeholder="Goal 2"></div>
+                <div class="checkbox-label"><input type="checkbox"> <input type="text" class="editable" placeholder="Goal 3"></div>
+            </div>
+            <div class="section">
+                <h2>Everything Else</h2>
+                <div class="checkbox-label"><input type="checkbox"> <input type="text" class="editable" placeholder="Task 1"></div>
+                <div class="checkbox-label"><input type="checkbox"> <input type="text" class="editable" placeholder="Task 2"></div>
+                <div class="checkbox-label"><input type="checkbox"> <input type="text" class="editable" placeholder="Task 3"></div>
+            </div>
+            <div class="section">
+                <h2>Next Week</h2>
+                <textarea class="editable" rows="5" placeholder="Notes for next week..."></textarea>
+            </div>
+        </div>
+        <div class="main">
+            <div class="section"><h2>Monday</h2><textarea class="editable" rows="5"></textarea></div>
+            <div class="section"><h2>Tuesday</h2><textarea class="editable" rows="5"></textarea></div>
+            <div class="section"><h2>Wednesday</h2><textarea class="editable" rows="5"></textarea></div>
+            <div class="section"><h2>Thursday</h2><textarea class="editable" rows="5"></textarea></div>
+            <div class="section"><h2>Friday</h2><textarea class="editable" rows="5"></textarea></div>
+            <div class="section">
+                <h2>Weekend</h2>
+                <textarea class="editable" rows="2" placeholder="Saturday..."></textarea>
+                <textarea class="editable" rows="2" placeholder="Sunday..."></textarea>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
